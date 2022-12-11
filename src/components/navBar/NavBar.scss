@@ -16,11 +16,11 @@
         .left {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
             span {
             font-weight: bold;
             font-size: 25px;
-            color: themed('logo') 
+            color: themed('logo');
             }
             .search {
                 display: flex;
@@ -33,19 +33,34 @@
                     width: 500px;
                     border: none;
                     background-color: transparent;
-                    color: themed('textColor')
+                    color: themed('textColor');
+
+                    @include mobile {
+                        display: none
+                    }
+
+                    @include tablet {
+                        width: 200px;
+                    }
                 }
             }
 
         }
 
         .right {
+
+            @include mobile {
+                display: none
+            }
             display: flex;
             align-items: center;
             gap: 20px;
             font-weight: 500;
 
             .user {
+                @include tablet {
+                    display: none;
+                }
                 display: flex;
                 align-items: center;
                 gap: 10px;

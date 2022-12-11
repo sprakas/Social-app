@@ -1,9 +1,12 @@
+@import "../../style.scss";
+
 .login {
     height: 100vh;
     background-color: rgb(193, 190, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+
 
     .card {
         width: 54%;
@@ -12,8 +15,24 @@
         background-color: white;
         border-radius: 10px;
         overflow: hidden;
+        @include mobile {
+           flex: 1;
+           height: 100vh;
+        }
+
+        @include tablet {
+            width: 70%;
+         }
 
         .left {
+
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                display: none;
+            }
             flex: 1;
             background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
             url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
